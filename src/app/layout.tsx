@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import { DarkModeProvider } from "@/providers/DarkModeProvider";
+import ReactQueryProvider from "@/providers/ReactQueryProvider";
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: '--font-jakarta' });
 const poppins = Poppins({
@@ -23,7 +24,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning className="dark">
-			<body className={jakarta.className}>{children}</body>
+			<body className={jakarta.className}>
+				<ReactQueryProvider>{children}</ReactQueryProvider>
+			</body>
 		</html>
 	);
 }
