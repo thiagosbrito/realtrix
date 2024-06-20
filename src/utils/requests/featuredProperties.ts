@@ -1,21 +1,3 @@
-import { GraphQLEnumType } from "graphql";
-import { featuredProperties as featurePropertiesQuery } from "../queries/featureProperties";
-
-export const marketTypeEnums = new GraphQLEnumType({
-    name: 'marketType',
-    values: {
-        Rent: {
-            value: 'Rent',
-        },
-        Buy: {
-            value: 'Buy',
-        },
-        Sell: {
-            value: 'Sell',
-        },
-    },
-});
-
 export async function getFeaturedPropertieEnum() {
     const queryEnums = `{
         __type(name: "MarketType") {
@@ -47,7 +29,7 @@ export async function getFeaturedProperties(filter: string) {
         body: JSON.stringify({
             query: `
                 query RealEstateProperties{
-                    realEstateProperties(where: { marketType: ${filter}}) {
+                    realEstateProperties(where: { marketType: ${filter} }) {
                         title
                         description {
                             html
