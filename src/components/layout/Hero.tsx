@@ -5,7 +5,7 @@ import { HomeModernIcon, UsersIcon } from '@heroicons/react/24/solid'
 
 export default function Hero() {
     return (
-        <div className="h-full flex items-center bg-[url('/images/hero.jpg')] dark:bg-[url('/images/hero_night.jpg')] bg-cover bg-bottom transition-all ease-in duration-75">
+        <div className="h-full  pb-12flex-1 flex items-center bg-[url('/images/hero.jpg')] dark:bg-[url('/images/hero_night.jpg')] bg-cover bg-bottom transition-all ease-in duration-75">
             <div className="container">
                 <div className="mt-32 md:mt-32 flex flex-col gap-y-6">
                     <div className="content w-full md:w-72 flex flex-col p-4 rounded-xl gap-y-4 bg-[hsl(var(--muted))] backdrop-blur mx-auto md:mx-0 shadow-2xl shadow-black">
@@ -40,7 +40,7 @@ export default function Hero() {
                             </div>
                         </TabsContent>
                     </Tabs>
-                    <div className="w-full md:w-6/12 flex gap-x-6 z-30">
+                    <div className="w-full md:w-6/12 flex gap-x-6 z-30 pb-12">
                         <div className="flex flex-1 flex-col gap-y-4">
                             <div className="w-16 h-16 p-1 rounded-full bg-white border border-green-200">
                                 <div className="w-full h-full rounded-full bg-green-200 flex items-center justify-center">

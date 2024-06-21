@@ -6,9 +6,9 @@ import FeaturedProperties from "@/components/layout/FeaturedProperties";
 export default function Home() {	
 	return (
 		<>
-			<main className="h-screen w-screen bg-slate-900 flex flex-col bg-gradient-to-b from-green-700 to-white transition-colors">
+			<main className="h-fit w-screen flex flex-col bg-gradient-to-b from-green-700 to-white transition-colors">
 				<Navbar />
-				<div className="flex-1 w-full">
+				<div className="flex-1 h-full w-full">
 					<Hero />
 				</div>
 			</main>
