@@ -55,7 +55,7 @@ export default function Navbar() {
     const [isOpen, toggleOpen] = useState(false)
 
     return (
-        <div className="w-full h-24 fixed backdrop-blur shadow z-50">
+        <div className="w-full h-24 fixed backdrop-blur fix-blur shadow z-50">
             <div className="container h-full flex items-center justify-between relative">
                 <Link href="/" className="w-44 h-12">
                     <Image src="/svgs/Realtrix.svg" alt="Realtrix" width={0} height={0} objectFit="cover" style={{width: '100%', height: 'auto'}} />

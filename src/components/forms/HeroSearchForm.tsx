@@ -43,7 +43,7 @@ export default function HeroSearchForm() {
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
-                <div className="grid grid-cols-5 divide-x py-3">
+                <div className="flex items-center md:grid md:grid-cols-5 md:divide-x py-3">
                     <div className="mx-auto px-2 col-span-2 w-full">
                         <FormField
                             control={form.control}
@@ -52,14 +52,14 @@ export default function HeroSearchForm() {
                                 <FormItem className="space-y-0 h-full w-full flex flex-col justify-center">
                                     <FormLabel className="font-normal text-sm text-muted-foreground" htmlFor="location">Location</FormLabel>
                                     <FormControl className="mt-0">
-                                        <Input className="focus-visible:ring-transparent h-7 active:ring-transparent py-0 text-xl font-bold px-0 border-none mt-0 placeholder:font-bold" placeholder="Barcelona, Spain" {...field} />
+                                        <Input className="focus-visible:ring-transparent h-7 active:ring-transparent py-0 text-base md:text-xl font-bold px-0 border-none mt-0 placeholder:font-bold" placeholder="Barcelona, Spain" {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
                             )}
                         />
                     </div>
-                    <div className="flex-col px-2 col-span-2">
+                    <div className="hidden md:flex flex-col px-2 col-span-2">
                         <FormField
                             control={form.control}
                             name="dateMoving"

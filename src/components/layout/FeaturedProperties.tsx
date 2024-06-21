@@ -62,9 +62,9 @@ export default function FeaturedProperties() {
 
     return (
         <div className="space-y-8">
-            <div className="flex justify-between">
+            <div className="w-full flex justify-center md:justify-between">
                 <Tabs defaultValue='Buy' onValueChange={(e) => changeFeatureFilter(e)}>
-                    <TabsList className='space-x-4'>
+                    <TabsList className='mx-auto w-full md:w-fit space-x-4'>
                         {enumsType && enumsType.map((enumItem, index) => (
                             <TabsTrigger key={index} value={enumItem.name}>{enumItem.name}</TabsTrigger>
                         ))}
@@ -76,9 +76,9 @@ export default function FeaturedProperties() {
                             
                     {enumsType && enumsType.map((enumItem, index) => (
                         <TabsContent key={index} value={enumItem.name} className='p-0 py-4'>
-                            <div className="grid grid-cols-3 gap-4">
+                            <div className="flex md:grid md:grid-cols-3 md:gap-4">
                                 {isLoading && <div>Loading...</div>}
-                                {isError && <div className='w-full text-red-900 font-bold'>{error.message}</div>}
+                                {isError && <div className='text-red-900 font-bold'>{error.message}</div>}
                                 {isSuccess && data?.data?.realEstateProperties.map((property: any, index: number) => (
                                     <Card key={index} className='overflow-hidden'>
                                         <CardHeader className='p-0 overflow-hidden'>
@@ -119,7 +119,7 @@ export default function FeaturedProperties() {
                     ))}
                 </Tabs>
 
-                <div className="w-4/12">
+                <div className="w-4/12 hidden md:block">
                     <div className="w-full border border-primary rounded-md bg-green-400 px-2 flex gap-x-3 items-center">
                         <MagnifyingGlassIcon className='size-6 text-primary' />
                         <Input placeholder='Search...' className='
